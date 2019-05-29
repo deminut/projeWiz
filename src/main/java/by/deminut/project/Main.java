@@ -37,8 +37,6 @@ public class Main {
         session.close();*/
 
         Start start = new Start();
-        start.GetSize();
-        start.GetEnemies();
-        start.GetElement();
+        start.start();
     }
 }
