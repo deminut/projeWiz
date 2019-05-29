@@ -47,9 +47,11 @@ public class JDialog extends javax.swing.JDialog {
             public void actionPerformed(ActionEvent e) {
                 GetData getData = new GetData();
 //                textArea1.append(getData.GetPlayers());
-                DefaultTableModel model = new DefaultTableModel();
-                Object[] row = {"1", "2"};
-                model.addRow(row);
+                String[] columns = {"Emplotee ID", "Name", "Address", "City", "Salary"};
+                DefaultTableModel model = new DefaultTableModel(columns, 4);
+                JTable detail = new JTable(model);
+                JScrollPane scroll = new JScrollPane(detail);
+
             }
         });
     }
@@ -117,6 +119,7 @@ public class JDialog extends javax.swing.JDialog {
         attackButton.setText("Attack");
         panel1.add(attackButton, new com.intellij.uiDesigner.core.GridConstraints(2, 3, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_NORTH, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         textField1 = new JTextField();
+        textField1.setText("0");
         panel1.add(textField1, new com.intellij.uiDesigner.core.GridConstraints(2, 1, 1, 2, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_NORTHWEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
         fireRadioButton = new JRadioButton();
         fireRadioButton.setText("Fire");
