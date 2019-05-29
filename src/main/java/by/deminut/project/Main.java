@@ -1,20 +1,13 @@
 package by.deminut.project;
 
-import by.deminut.project.dao.EnemyEntity;
-import by.deminut.project.dao.PlayerEntity;
-import by.deminut.project.dao.SizeEntity;
-import by.deminut.project.utils.HibernateSessionFactory;
 import by.deminut.project.utils.Start;
-import org.hibernate.Session;
-import org.hibernate.query.NativeQuery;
 
-import java.util.List;
-
-
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
 public class Main {
-
     public static void main(String[] args) {
 
         /*System.out.println("Hibernate tutorial");
@@ -38,5 +31,7 @@ public class Main {
 
         Start start = new Start();
         start.start();
+
+
     }
 }

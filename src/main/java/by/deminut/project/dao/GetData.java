@@ -13,7 +13,7 @@ public class GetData {
     public GetData() {
     }
 
-    public void GetSize(){
+    public String GetSize(){
         Session session = HibernateSessionFactory.getSessionFactory().openSession();
         session.beginTransaction();
         NativeQuery query = session.getSession().createNativeQuery("select * from size", SizeEntity.class);
@@ -22,6 +22,7 @@ public class GetData {
         session.getTransaction().commit();
         System.out.println("Successfully get size");
         session.close();
+        return "Successfully get size";
     }
 
     public void GetEnemies(){
@@ -46,7 +47,7 @@ public class GetData {
         session.close();
     }
 
-    public void GetPlayers(){
+    public String GetPlayers(){
         Session session = HibernateSessionFactory.getSessionFactory().openSession();
         session.beginTransaction();
         NativeQuery query = session.getSession().createNativeQuery("select * from player", PlayerEntity.class);
@@ -55,6 +56,7 @@ public class GetData {
         session.getTransaction().commit();
         System.out.println("Successfully get players");
         session.close();
+        return "Successfully get size";
     }
 
 }
